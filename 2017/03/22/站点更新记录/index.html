@@ -392,7 +392,23 @@
 <li>2017年3月21日 搭建个人博客</li>
 <li>此前一直有搭博客的想法，终于…</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleSingleton</span> </span>&#123; </div><div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> SimpleSingleton singleInstance = <span class="keyword">new</span> SimpleSingleton(); </div><div class="line">   </div><div class="line">  <span class="comment">//Marking default constructor private </span></div><div class="line">  <span class="comment">//to avoid direct instantiation. </span></div><div class="line">  <span class="function"><span class="keyword">private</span> <span class="title">SimpleSingleton</span><span class="params">()</span> </span>&#123; </div><div class="line">  &#125; </div><div class="line">   </div><div class="line">  <span class="comment">//Get instance for class SimpleSingleton </span></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SimpleSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123; </div><div class="line">   </div><div class="line">    <span class="keyword">return</span> singleInstance; </div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre class="line-numbers language-java"><code class="language-java">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleSingleton</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">private</span> <span class="token keyword">static</span> SimpleSingleton singleInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token comment" spellcheck="true">//Marking default constructor private </span>
+  <span class="token comment" spellcheck="true">//to avoid direct instantiation. </span>
+  <span class="token keyword">private</span> <span class="token function">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token punctuation">}</span> 
+
+  <span class="token comment" spellcheck="true">//Get instance for class SimpleSingleton </span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> SimpleSingleton <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">return</span> singleInstance<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
     
 
     
