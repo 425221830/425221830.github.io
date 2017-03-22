@@ -11,7 +11,7 @@
 <li>2017年3月21日 搭建个人博客</li>
 <li>此前一直有搭博客的想法，终于…</li>
 </ul>
-<pre class=" language-java"><code class="language-java">
+<pre class="line-numbers language-java"><code class="language-java">
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleSingleton</span> <span class="token punctuation">{</span> 
   <span class="token keyword">private</span> <span class="token keyword">static</span> SimpleSingleton singleInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 
@@ -26,7 +26,7 @@
     <span class="token keyword">return</span> singleInstance<span class="token punctuation">;</span> 
   <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       
         
