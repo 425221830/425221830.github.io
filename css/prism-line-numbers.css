@@ -1,4 +1,4 @@
-pre.line-numbers {
+#post-content pre.line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
