@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[站点更新记录]]></title>
+      <url>https://xiseven.top/2017/03/22/%E7%AB%99%E7%82%B9%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><ul>
+<li>2017年3月22日 绑定域名xiseven.top，并支持https</li>
+<li>2017年3月21日 搭建个人博客</li>
+<li>此前一直有搭博客的想法，终于…</li>
+</ul>
+<pre class=" language-java"><code class="language-java">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleSingleton</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">private</span> <span class="token keyword">static</span> SimpleSingleton singleInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token comment" spellcheck="true">//Marking default constructor private </span>
+  <span class="token comment" spellcheck="true">//to avoid direct instantiation. </span>
+  <span class="token keyword">private</span> <span class="token function">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token punctuation">}</span> 
+
+  <span class="token comment" spellcheck="true">//Get instance for class SimpleSingleton </span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> SimpleSingleton <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">return</span> singleInstance<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
