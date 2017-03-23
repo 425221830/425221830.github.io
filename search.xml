@@ -5,28 +5,26 @@
     
     <entry>
       <title><![CDATA[站点更新记录]]></title>
-      <url>https://xiseven.top/2017/03/22/%E7%AB%99%E7%82%B9%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</url>
+      <url>https://xiseven.top/2017/03/22/SiteUpdateRecord/</url>
       <content type="html"><![CDATA[<h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><ul>
-<li>2017年3月22日 绑定域名xiseven.top，并支持https</li>
-<li>2017年3月21日 搭建个人博客</li>
+<li>2017年3月23日 <ul>
+<li>将图片托管到腾讯云COS，提高加载速度</li>
+</ul>
+</li>
+<li>2017年3月22日 <ul>
+<li>绑定域名<a href="xiseven.top">xiseven.top</a>，并支持https</li>
+<li>代码高亮使用主题推荐的插件，并解决插件行号显示问题<ul>
+<li>主题css与插件css设置有冲突，解决方案：提高插件行号css选择器的优先级</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2017年3月21日 <ul>
+<li>搭建个人博客</li>
+</ul>
+</li>
 <li>此前一直有搭博客的想法，终于…</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java">
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleSingleton</span> <span class="token punctuation">{</span> 
-  <span class="token keyword">private</span> <span class="token keyword">static</span> SimpleSingleton singleInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">//Marking default constructor private </span>
-  <span class="token comment" spellcheck="true">//to avoid direct instantiation. </span>
-  <span class="token keyword">private</span> <span class="token function">SimpleSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-  <span class="token punctuation">}</span> 
-
-  <span class="token comment" spellcheck="true">//Get instance for class SimpleSingleton </span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> SimpleSingleton <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-
-    <span class="token keyword">return</span> singleInstance<span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span> 
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       
         
