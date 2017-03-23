@@ -12,7 +12,7 @@
 </ul>
 </li>
 <li>2017年3月22日 <ul>
-<li>绑定域名<a href="xiseven.top">xiseven.top</a>，并支持https</li>
+<li>绑定域名<a href="https://xiseven.top/">xiseven.top</a>，并支持https</li>
 <li>代码高亮使用主题推荐的插件，并解决插件行号显示问题<ul>
 <li>主题css与插件css设置有冲突，解决方案：提高插件行号css选择器的优先级</li>
 </ul>
