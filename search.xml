@@ -3,33 +3,6 @@
   
   
     
-    <entry>
-      <title><![CDATA[站点更新记录]]></title>
-      <url>https://xiseven.top/2017/03/22/SiteUpdateRecord/</url>
-      <content type="html"><![CDATA[<h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><ul>
-<li>2017年3月23日 <ul>
-<li>将图片托管到腾讯云COS，提高加载速度</li>
-</ul>
-</li>
-<li>2017年3月22日 <ul>
-<li>绑定域名<a href="https://xiseven.top/">xiseven.top</a>，并支持https</li>
-<li>代码高亮使用主题推荐的插件，并解决插件行号显示问题<ul>
-<li>主题css与插件css设置有冲突，解决方案：提高插件行号css选择器的优先级</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>2017年3月21日 <ul>
-<li>搭建个人博客</li>
-</ul>
-</li>
-<li>此前一直有搭博客的想法，终于…</li>
-</ul>
-]]></content>
-      
-        
-    </entry>
-    
   
   
 </search>
