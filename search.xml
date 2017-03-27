@@ -6,108 +6,67 @@
     <entry>
       <title><![CDATA[关于http协议的学习记录]]></title>
       <url>https://xiseven.top/2017/03/27/StudyHttpRecord/</url>
-      <content type="html"><![CDATA[<h2 id="http是什么"><a href="#http是什么" class="headerlink" title="http是什么"></a>http是什么</h2><ul>
-<li>词条的解释是：<em>超文本传输协议</em>（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种<strong>网络协议</strong>。</li>
-<li>我的理解就是：客户端与服务端之间的数据传输的格式规范。<h2 id="http的内容"><a href="#http的内容" class="headerlink" title="http的内容"></a>http的内容</h2></li>
-<li>按照我的学习理解，http分两部分<ul>
-<li>http请求（客户端 –&gt; 服务端）</li>
-<li>http响应（服务端 –&gt; 客户端）<h3 id="http请求"><a href="#http请求" class="headerlink" title="http请求"></a>http请求</h3></li>
-</ul>
-</li>
-<li><strong>http请求的格式：</strong><pre><code>&lt;request-line&gt;                    -请求行        
-&lt;request-headers&gt;                -请求头（包含多个内容）
-&lt;empty-line&gt;                    -空行
-[&lt;message-body&gt;]                -实体内容
-</code></pre></li>
-<li><strong>http请求示例：</strong></li>
-</ul>
-<blockquote>
-<p>GET /hello HTTP/1.1                     —-请求行（请求方式 uri http协议）<br>Host: localhost:8080                    —-主机地址<br>User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0   —-客户端的身份信息<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8        —-接收的格式类型<br>Accept-Language: zh-cn,en-us;q=0.8,zh;q=0.5,en;q=0.3            —-接收的语言<br>Accept-Encoding: gzip, deflate                                    —-接收压缩格式<br>Connection: keep-alive                    —-连接状态，保持连接<br>                                      —-一个空行<br>name=eric&amp;password=123456             —-（可选）实体内容</p>
-</blockquote>
-<ul>
-<li><p><strong>http请求详解</strong></p>
-<ul>
-<li><strong>请求行：</strong><ul>
-<li><strong>请求方法</strong>（GET 、POST、HEAD、TRACE、PUT、CONNECT 、DELETE），以下两种最为常用<ul>
-<li><strong>GET方法：</strong><ol>
-<li>地址栏（URI）会跟上参数数据。以？开头，多个参数之间以&amp;分割。</li>
-<li>GET提交参数数据有限制，不超过1KB。</li>
-<li>GET方式不适合提交敏感密码。（参数会显示到地址栏）</li>
-<li><strong>注意： 浏览器直接访问的请求，默认提交方式是GET方式</strong></li>
-</ol>
-</li>
-<li><strong>POST方法</strong>：<ol>
-<li>参数不会跟着URI后面。<strong>参数而是跟在请求的实体内容中</strong>。</li>
-<li>POST提交的参数数据没有限制。</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><strong>请求资源：</strong><ul>
-<li>URL：统一资源定位符。只能定位互联网资源。是URI的子集。</li>
-<li>URI： 统一资源标记符。用于标记任何资源。可以是本地文件系统，局域网的资源，也可以是互联网。</li>
-</ul>
-</li>
-<li><strong>HTTP版本</strong>目前主要分1.0和1.1<ul>
-<li>HTTP/1.0：非持久连接，建立连接后只能发送一次请求，一次请求之后连接关闭。<br><strong>请求头中的Connection：close</strong></li>
-<li>HTTP/1.1：默认使用持久连接，建立连接后可以在一次连接中发送多次请求。（基本都使用1.1）。<br><strong>请求头中的Connection：keep-alive</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>请求头：</strong> 多个key-value对象</p>
-<blockquote>
-<p>Accept: text/html,image/<em>     </em>– 浏览器接受的数据类型<em><br>Accept-Charset: ISO-8859-1     </em>– 浏览器接受的编码格式<em><br>Accept-Encoding: gzip,compress  </em>–浏览器接受的数据压缩格式<em><br>Accept-Language: en-us,zh-       </em>–浏览器接受的语言<em><br>Host: www.it315.org:80          </em>–（必须的）当前请求访问的目标地址（主机:端口）<em><br>If-Modified-Since: Tue, 11 Jul 2000 18:23:51 GMT  </em>–浏览器最后的缓存时间<em><br>Referer: <a href="http://www.it315.org/index.jsp" target="_blank" rel="external">http://www.it315.org/index.jsp</a>      </em>– 当前请求来自于哪里<em><br>User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)  </em>–浏览器类型<em><br>Cookie:name=eric                     </em>– 浏览器保存的cookie信息<em><br>Connection: close/Keep-Alive            </em>– 浏览器跟服务器连接状态。close: 连接关闭  keep-alive：保存连接。<em><br>Date: Tue, 11 Jul 2000 18:23:51 GMT      </em>– 请求发出的时间*</p>
-</blockquote>
-</li>
-<li><p><strong>空行：</strong> 通知服务器以下不再有请求头</p>
-</li>
-<li><strong>实体内容：</strong><ul>
-<li>只有POST提交的参数会放到实体内容中</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="http响应"><a href="#http响应" class="headerlink" title="http响应"></a>http响应</h3><ul>
-<li><strong>http响应的格式：</strong><pre><code>&lt;status-line&gt;                    --状态行
-&lt;response-headers&gt;                --响应头
-&lt;empty-line&gt;                    --空行
-[&lt;message-body&gt;]                --实体内容
-</code></pre></li>
-<li><p><strong>http响应示例：</strong> </p>
-<blockquote>
-<p>HTTP/1.1 200 OK<br>Date: Sat, 31 Dec 2005 23:59:59 GMT<br>Content-Type: text/html;charset=ISO-8859-1<br>Content-Length: 122<br>–空行<br>＜html＞<br>……<br>＜/html＞</p>
-</blockquote>
-</li>
-<li><p><strong>http响应详解：</strong> </p>
-<ul>
-<li><p><strong>状态行：</strong> </p>
-<ul>
-<li><strong>协议版本：</strong> 可参上请求行/HTTP版本</li>
-<li><p><strong>状态码：</strong> </p>
-<ul>
-<li><strong>介绍：</strong> 状态代码为3位数字，200~299的状态码表示成功，300~399的状态码指资源重定向，400~499的状态码指客户端请求出错，500~599的状态码指服务端出错（HTTP/1.1向协议中引入了信息性状态码，范围为100~199）</li>
-<li><p><strong>常见例子：</strong> </p>
-<p>  | 状态码      |     说明 |<br>  | :——– | :——–|<br>  | 200|   响应成功 |<br>  | 302|   跳转，跳转地址通过响应头中的Location属性指定|<br>  | 400|   客户端请求有语法错误，不能被服务器识别|<br>  | 403|   服务器接收到请求，但是拒绝提供服务（认证失败）|<br>  | 404|   请求资源不存在|<br>  | 500|   服务器内部错误|</p>
-</li>
-</ul>
-</li>
-<li><p><strong>状态码描述</strong> </p>
-</li>
-</ul>
-</li>
-<li><p><strong>响应头：</strong> </p>
-<blockquote>
-<p>Location: <a href="http://www.it315.org/index.jsp" target="_blank" rel="external">http://www.it315.org/index.jsp</a>   –表示重定向的地址，该头和302的状态码一起使用。<br>Server:apache tomcat                 –表示服务器的类型<br>Content-Encoding: gzip                 – 表示服务器发送给浏览器的数据压缩类型<br>Content-Length: 80                    –表示服务器发送给浏览器的数据长度<br>Content-Language: zh-cn               –表示服务器支持的语言<br>Content-Type: text/html; charset=GB2312   –表示服务器发送给浏览器的数据类型及内容编码<br>Last-Modified: Tue, 11 Jul 2000 18:23:51 GMT  –表示服务器资源的最后修改时间<br>Refresh: 1;url=<a href="http://www.it315.org" target="_blank" rel="external">http://www.it315.org</a>     –表示定时刷新<br>Content-Disposition: attachment; filename=aaa.zip –表示告诉浏览器以下载方式打开资源（下载文件时用到）<br>Transfer-Encoding: chunked<br>Set-Cookie:SS=Q0=5Lb_nQ; path=/search   –表示服务器发送给浏览器的cookie信息（会话管理用到）<br>Expires: -1                           –表示通知浏览器不进行缓存<br>Cache-Control: no-cache<br>Pragma: no-cache<br>Connection: close/Keep-Alive           –表示服务器和浏览器的连接状态。close：关闭连接 keep-alive:保存连接</p>
-</blockquote>
-</li>
-<li><p><strong>空行：</strong> 通知服务器以下不再有响应头</p>
-</li>
-<li><strong>实体内容：</strong> 即服务器返回的内容</li>
-</ul>
-</li>
-</ul>
+      <content type="html"><![CDATA[<h2 id="http是什么">http是什么</h2>
+
+<ul><li>词条的解释是：<em>超文本传输协议</em>（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种<strong>网络协议</strong>。</li><br><li>我的理解就是：客户端与服务端之间的数据传输的格式规范。</li><br></ul>
+
+
+
+<h2 id="什么是httphttp的内容">什么是http（http的内容）</h2>
+
+<ul><li>按照我的学习理解，http分两部分 <br><br><ul><br><li>http请求（客户端 –&gt; 服务端）</li><br><li>http响应（服务端 –&gt; 客户端）</li></ul></li><br></ul>
+
+
+
+<h3 id="http请求">http请求</h3>
+
+<ul><li><strong>http请求的格式：</strong></li><br></ul>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs fsharp"><span class="hljs-comment line-number">1.</span>&lt;request-line&gt;                  -请求行        <br><span class="hljs-comment line-number">2.</span>&lt;request-headers&gt;               -请求头（包含多个内容）<br><span class="hljs-comment line-number">3.</span>&lt;empty-line&gt;                    -空行<br><span class="hljs-comment line-number">4.</span><span class="hljs-annotation">[&lt;message-body&gt;]</span>                -实体内容<br></code></pre>
+
+<ul><li><strong>http请求示例：</strong></li><br></ul>
+
+<blockquote><br>  <p>GET /hello HTTP/1.1                     —-请求行（请求方式 uri http协议） <br><br>  Host: localhost:8080                    —-主机地址 <br><br>  User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0   —-客户端的身份信息 <br><br>  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8     —-接收的格式类型 <br><br>  Accept-Language: zh-cn,en-us;q=0.8,zh;q=0.5,en;q=0.3            —-接收的语言 <br><br>  Accept-Encoding: gzip, deflate                                  —-接收压缩格式 <br><br>  Connection: keep-alive                  —-连接状态，保持连接 <br><br>                                        —-一个空行 <br><br>  name=eric&amp;password=123456             —-（可选）实体内容</p><br></blockquote>
+
+<ul><li><p><strong>http请求详解</strong></p><br><br><ul><br><li><strong>请求行：</strong> <br><br><ul><br><li><strong>请求方法</strong>（GET 、POST、HEAD、TRACE、PUT、CONNECT 、DELETE），以下两种最为常用 <br><br><ul><br><li><strong>GET方法：</strong> <br><br><ol><br><li rel="1">地址栏（URI）会跟上参数数据。以？开头，多个参数之间以&amp;分割。</li><br><li rel="2">GET提交参数数据有限制，不超过1KB。</li><br><li rel="3">GET方式不适合提交敏感密码。（参数会显示到地址栏）</li><br><li rel="4"><strong>注意： 浏览器直接访问的请求，默认提交方式是GET方式</strong></li></ol></li><br><li><strong>POST方法</strong>： <br><br><ol><br><li rel="1">参数不会跟着URI后面。<strong>参数而是跟在请求的实体内容中</strong>。</li><br><li rel="2">POST提交的参数数据没有限制。</li></ol></li></ul></li><br><li><strong>请求资源：</strong> <br><br><ul><br><li>URL：统一资源定位符。只能定位互联网资源。是URI的子集。</li><br><li>URI： 统一资源标记符。用于标记任何资源。可以是本地文件系统，局域网的资源，也可以是互联网。</li></ul></li><br><li><strong>HTTP版本</strong>目前主要分1.0和1.1 <br><br><ul><br><li>HTTP/1.0：非持久连接，建立连接后只能发送一次请求，一次请求之后连接关闭。 <br><br><strong>请求头中的Connection：close</strong></li><br><li>HTTP/1.1：默认使用持久连接，建立连接后可以在一次连接中发送多次请求。（基本都使用1.1）。 <br><br><strong>请求头中的Connection：keep-alive</strong></li></ul></li></ul></li><br><li><p><strong>请求头：</strong>多个key-value对象</p><br><br><blockquote><br>  <p>Accept: text/html,image/*     <em>– 浏览器接受的数据类型</em> <br><br>  Accept-Charset: ISO-8859-1     <em>– 浏览器接受的编码格式</em> <br><br>  Accept-Encoding: gzip,compress  <em>–浏览器接受的数据压缩格式</em> <br><br>  Accept-Language: en-us,zh-       <em>–浏览器接受的语言</em> <br><br>  Host: www.it315.org:80          <em>–（必须的）当前请求访问的目标地址（主机:端口）</em> <br><br>  If-Modified-Since: Tue, 11 Jul 2000 18:23:51 GMT  <em>–浏览器最后的缓存时间</em> <br><br>  Referer: <a href="http://www.it315.org/index.jsp" target="_blank" rel="external">http://www.it315.org/index.jsp</a>      <em>– 当前请求来自于哪里</em> <br><br>  User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)  <em>–浏览器类型</em> <br><br>  Cookie:name=eric                     <em>– 浏览器保存的cookie信息</em> <br><br>  Connection: close/Keep-Alive            <em>– 浏览器跟服务器连接状态。close: 连接关闭  keep-alive：保存连接。</em> <br><br>  Date: Tue, 11 Jul 2000 18:23:51 GMT      <em>– 请求发出的时间</em></p><br></blockquote></li><br><li><p><strong>空行：</strong>通知服务器以下不再有请求头</p></li><br><li><strong>实体内容：</strong> <br><br><ul><br><li>只有POST提交的参数会放到实体内容中</li></ul></li></ul></li><br></ul>
+
+
+
+<h3 id="http响应">http响应</h3>
+
+<ul><li><strong>http响应的格式：</strong></li><br></ul>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs fsharp"><span class="hljs-comment line-number">1.</span>&lt;status-line&gt;                   --状态行<br><span class="hljs-comment line-number">2.</span>&lt;response-headers&gt;              --响应头<br><span class="hljs-comment line-number">3.</span>&lt;empty-line&gt;                    --空行<br><span class="hljs-comment line-number">4.</span><span class="hljs-annotation">[&lt;message-body&gt;]</span>                --实体内容<br></code></pre>
+
+<p><ul><li><p><strong>http响应示例：</strong></p></li></ul></p>
+<p><blockquote><br>  <p>HTTP/1.1 200 OK <br><br>  Date: Sat, 31 Dec 2005 23:59:59 GMT <br><br>  Content-Type: text/html;charset=ISO-8859-1 <br><br>  Content-Length: 122 <br><br>  –空行 <br><br>  ＜html＞ <br><br>  …… <br><br>  ＜/html＞</p><br></blockquote></p>
+<p><li><p><strong>http响应详解：</strong></p></li></p>
+<p><ul></ul></p>
+<p><li><p><strong>状态行：</strong></p></li></p>
+<p><ul></ul></p>
+<p><li><strong>协议版本：</strong>可参上请求行/HTTP版本</li></p>
+<p><li><p><strong>状态码：</strong></p></li></p>
+<p><ul></ul></p>
+<p><li><strong>介绍：</strong>状态代码为3位数字，200~299的状态码表示成功，300~399的状态码指资源重定向，400~499的状态码指客户端请求出错，500~599的状态码指服务端出错（HTTP/1.1向协议中引入了信息性状态码，范围为100~199）</li></p>
+<p><li><p><strong>常见例子：</strong></p></li></p>
+<p><table></table></p>
+<p><thead></thead></p>
+<p><tr><br>  <th align="left">状态码</th><br>  <th align="left">说明</th><br></tr><br></p>
+<p><tbody><tr><br>  <td align="left">200</td><br>  <td align="left">响应成功</td><br></tr></tbody></p>
+<p><tr><br>  <td align="left">302</td><br>  <td align="left">跳转，跳转地址通过响应头中的Location属性指定</td><br></tr></p>
+<p><tr><br>  <td align="left">400</td><br>  <td align="left">客户端请求有语法错误，不能被服务器识别</td><br></tr></p>
+<p><tr><br>  <td align="left">403</td><br>  <td align="left">服务器接收到请求，但是拒绝提供服务（认证失败）</td><br></tr></p>
+<p><tr><br>  <td align="left">404</td><br>  <td align="left">请求资源不存在</td><br></tr></p>
+<p><tr><br>  <td align="left">500</td><br>  <td align="left">服务器内部错误</td><br></tr><br><br></p>
+<p><li><p><strong>状态码描述</strong></p></li></p>
+<p><li><p><strong>响应头：</strong></p></li></p>
+<p><blockquote><br>  <p>Location:<a href="http://www.it315.org/index.jsp" target="_blank" rel="external">http://www.it315.org/index.jsp</a>   –表示重定向的地址，该头和302的状态码一起使用。 <br><br>  Server:apache tomcat                 –表示服务器的类型 <br><br>  Content-Encoding: gzip                 – 表示服务器发送给浏览器的数据压缩类型 <br><br>  Content-Length: 80                    –表示服务器发送给浏览器的数据长度 <br><br>  Content-Language: zh-cn               –表示服务器支持的语言 <br><br>  Content-Type: text/html; charset=GB2312   –表示服务器发送给浏览器的数据类型及内容编码 <br><br>  Last-Modified: Tue, 11 Jul 2000 18:23:51 GMT  –表示服务器资源的最后修改时间 <br><br>  Refresh: 1;url=<a href="http://www.it315.org" target="_blank" rel="external">http://www.it315.org</a>    –表示定时刷新 <br><br>  Content-Disposition: attachment; filename=aaa.zip –表示告诉浏览器以下载方式打开资源（下载文件时用到） <br><br>  Transfer-Encoding: chunked <br><br>  Set-Cookie:SS=Q0=5Lb_nQ; path=/search   –表示服务器发送给浏览器的cookie信息（会话管理用到） <br><br>  Expires: -1                           –表示通知浏览器不进行缓存 <br><br>  Cache-Control: no-cache <br><br>  Pragma: no-cache <br><br>  Connection: close/Keep-Alive           –表示服务器和浏览器的连接状态。close：关闭连接 keep-alive:保存连接</p><br></blockquote></p>
+<p><li><p><strong>空行：</strong>通知服务器以下不再有响应头</p></li></p>
+<p><li><strong>实体内容：</strong>即服务器返回的内容</li><br></p>
 ]]></content>
       
         <categories>
