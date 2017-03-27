@@ -11,7 +11,7 @@
 <li>我的理解就是：客户端与服务端之间的数据传输的格式规范。<h2 id="什么是http（http的内容）"><a href="#什么是http（http的内容）" class="headerlink" title="什么是http（http的内容）"></a>什么是http（http的内容）</h2></li>
 <li>按照我的学习理解，http分两部分<ul>
 <li>http请求（客户端 –&gt; 服务端）</li>
-<li>http响应（服务端 –&gt; 客户端）<br>###http请求</li>
+<li>http响应（服务端 –&gt; 客户端）<h3 id="http请求"><a href="#http请求" class="headerlink" title="http请求"></a>http请求</h3></li>
 </ul>
 </li>
 <li><strong>http请求的格式：</strong><pre><code>&lt;request-line&gt;                    -请求行        
@@ -69,8 +69,7 @@
 </ul>
 </li>
 </ul>
-<p>###http响应</p>
-<ul>
+<h3 id="http响应"><a href="#http响应" class="headerlink" title="http响应"></a>http响应</h3><ul>
 <li><strong>http响应的格式：</strong><pre><code>&lt;status-line&gt;                    --状态行
 &lt;response-headers&gt;                --响应头
 &lt;empty-line&gt;                    --空行
