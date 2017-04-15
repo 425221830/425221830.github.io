@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP," />
+  <meta name="keywords" content="Web," />
 
 
 
@@ -87,25 +87,28 @@
 
 
 
-<meta name="description" content="http是什么
+<meta name="description" content="本篇文章简单记录了关于Web会话管理技术的学习笔记。
+目前常用的会话管理技术是Cookie与Session
 
-词条的解释是：超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。
-我的理解就是：客户端与服务端之间的数据传输的格式规范。">
+Cookie通过在客户端记录信息确定用户身份
+Session通过在服务器端记录信息确定用户身份。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于http协议的学习记录">
-<meta property="og:url" content="https://xiseven.top/2017/03/27/StudyHttpRecord/index.html">
+<meta property="og:title" content="Cookie和Session">
+<meta property="og:url" content="https://xiseven.top/2017/04/15/Cookie&Session/index.html">
 <meta property="og:site_name" content="xiseven's blog">
-<meta property="og:description" content="http是什么
+<meta property="og:description" content="本篇文章简单记录了关于Web会话管理技术的学习笔记。
+目前常用的会话管理技术是Cookie与Session
 
-词条的解释是：超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。
-我的理解就是：客户端与服务端之间的数据传输的格式规范。">
-<meta property="og:updated_time" content="2017-03-27T16:00:00.000Z">
+Cookie通过在客户端记录信息确定用户身份
+Session通过在服务器端记录信息确定用户身份。">
+<meta property="og:updated_time" content="2017-04-15T15:32:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于http协议的学习记录">
-<meta name="twitter:description" content="http是什么
+<meta name="twitter:title" content="Cookie和Session">
+<meta name="twitter:description" content="本篇文章简单记录了关于Web会话管理技术的学习笔记。
+目前常用的会话管理技术是Cookie与Session
 
-词条的解释是：超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。
-我的理解就是：客户端与服务端之间的数据传输的格式规范。">
+Cookie通过在客户端记录信息确定用户身份
+Session通过在服务器端记录信息确定用户身份。">
 
 
 
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://xiseven.top/2017/03/27/StudyHttpRecord/"/>
+  <link rel="canonical" href="https://xiseven.top/2017/04/15/Cookie&Session/"/>
 
 
 
 
 
-  <title> 关于http协议的学习记录 | xiseven's blog </title>
+  <title> Cookie和Session | xiseven's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://xiseven.top/2017/03/27/StudyHttpRecord/">
+    <link itemprop="mainEntityOfPage" href="https://xiseven.top/2017/04/15/Cookie&Session/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiseven">
@@ -333,7 +336,7 @@
             
             
               
-                关于http协议的学习记录
+                Cookie和Session
               
             
           </h2>
@@ -348,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-27T00:00:00+08:00">
-                2017-03-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T23:33:32+08:00">
+                2017-04-15
               </time>
             
 
@@ -371,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础知识/" itemprop="url" rel="index">
-                    <span itemprop="name">基础知识</span>
+                  <a href="/categories/Web基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Web基础</span>
                   </a>
                 </span>
 
@@ -389,7 +392,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/03/27/StudyHttpRecord/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/15/Cookie&Session/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -398,7 +401,7 @@
 
           
           
-             <span id="/2017/03/27/StudyHttpRecord/" class="leancloud_visitors" data-flag-title="关于http协议的学习记录">
+             <span id="/2017/04/15/Cookie&Session/" class="leancloud_visitors" data-flag-title="Cookie和Session">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,176 +430,176 @@
       
 
       
-        <h2 id="http是什么"><a class="header-anchor" href="#http是什么"> </a>http是什么</h2>
+        <blockquote>
+<p>本篇文章简单记录了关于<strong>Web会话管理技术</strong>的学习笔记。<br>
+目前常用的会话管理技术是<strong>Cookie</strong>与<strong>Session</strong></p>
 <ul>
-<li>词条的解释是：<em>超文本传输协议</em>（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种<strong>网络协议</strong>。</li>
-<li>我的理解就是：客户端与服务端之间的数据传输的格式规范。</li>
+<li>Cookie通过在客户端记录信息确定用户身份</li>
+<li>Session通过在服务器端记录信息确定用户身份。</li>
 </ul>
+</blockquote>
 <a id="more"></a>
-<h2 id="什么是http-http的内容"><a class="header-anchor" href="#什么是http-http的内容"> </a>什么是http（http的内容）</h2>
+<h2 id="会话管理"><a class="header-anchor" href="#会话管理"> </a>会话管理</h2>
 <ul>
-<li>按照我的学习理解，http分两部分
-<ul>
-<li>http请求（客户端 --&gt; 服务端）</li>
-<li>http响应（服务端 --&gt; 客户端）</li>
+<li>会话管理： <strong>管理</strong>浏览器和服务器之间的会话过程中产生的<strong>会话数据</strong></li>
 </ul>
-</li>
-</ul>
-<h3 id="http请求"><a class="header-anchor" href="#http请求"> </a>http请求</h3>
-<h4 id="http请求的格式"><a class="header-anchor" href="#http请求的格式"> </a><strong>http请求的格式</strong></h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;request-line&gt;					-请求行		</div><div class="line">&lt;request-headers&gt;				-请求头（包含多个内容）</div><div class="line">&lt;empty-line&gt;					-空行</div><div class="line">[&lt;message-body&gt;]				-实体内容</div></pre></td></tr></table></figure>
-<h4 id="http请求示例"><a class="header-anchor" href="#http请求示例"> </a><strong>http请求示例</strong></h4>
-<blockquote>
-<p>GET /hello HTTP/1.1                     ----请求行（请求方式 uri http协议）<br>
-Host: localhost:8080                    ----主机地址<br>
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0   ----客户端的身份信息<br>
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8		----接收的格式类型<br>
-Accept-Language: zh-cn,en-us;q=0.8,zh;q=0.5,en;q=0.3			----接收的语言<br>
-Accept-Encoding: gzip, deflate									----接收压缩格式<br>
-Connection: keep-alive					----连接状态，保持连接<br>
-	                                  ----一个空行<br>
-name=eric&amp;password=123456             ----（可选）实体内容</p>
-</blockquote>
-<h4 id="http请求详解"><a class="header-anchor" href="#http请求详解"> </a><strong>http请求详解</strong></h4>
-<h5 id="请求行"><a class="header-anchor" href="#请求行"> </a><strong>请求行</strong></h5>
-<ul>
-<li><strong>请求方法</strong>（GET 、POST、HEAD、TRACE、PUT、CONNECT 、DELETE），以下两种最为常用
-<ul>
-<li><strong>GET方法：</strong>
+<h2 id="cookie"><a class="header-anchor" href="#cookie"> </a>Cookie</h2>
+<h3 id="cookie机制的引入"><a class="header-anchor" href="#cookie机制的引入"> </a>Cookie机制的引入</h3>
+<p>在Web应用程序是使用HTTP协议传输数据的。HTTP协议是无状态的协议。一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话。<br>
+Cookie就是记录会话数据这样的一种机制。它可以弥补HTTP协议无状态的不足。</p>
+<h3 id="cookie原理"><a class="header-anchor" href="#cookie原理"> </a>Cookie原理</h3>
+<p>Cookie是客户端技术，服务器把每个用户的数据以cookie的形式写给用户各自的浏览器。当用户使用浏览器再去访问服务器中的web资源时，就会带着各自的数据去，这样，web资源处理的就是用户各自的数据了。</p>
+<h3 id="cookie机制的流程"><a class="header-anchor" href="#cookie机制的流程"> </a>Cookie机制的流程</h3>
 <ol>
-<li>地址栏（URI）会跟上参数数据。以？开头，多个参数之间以&amp;分割。</li>
-<li>GET提交参数数据有限制，不超过1KB。</li>
-<li>GET方式不适合提交敏感密码。（参数会显示到地址栏）</li>
-<li><strong>注意： 浏览器直接访问的请求，默认提交方式是GET方式</strong></li>
+<li>服务器创建cookie对象，把会话数据存储到cookie对象中。<br>
+new Cookie(“name”,“value”);</li>
+<li>服务器发送cookie信息到浏览器<br>
+response.addCookie(cookie);<br>
+举例： set-cookie: name=xiseven  (隐藏发送了一个set-cookie名称的响应头)</li>
+<li>浏览器得到服务器发送的cookie，然后保存在浏览器端。</li>
+<li>浏览器在下次访问服务器时，会带着cookie信息<br>
+举例： cookie: name=xiseven  (隐藏带着一个叫cookie名称的请求头)</li>
+<li>服务器接收到浏览器带来的cookie信息<br>
+request.getCookies();</li>
 </ol>
-</li>
-<li><strong>POST方法：</strong>
-<ol>
-<li>参数不会跟着URI后面。<strong>参数而是跟在请求的实体内容中</strong>。</li>
-<li>POST提交的参数数据没有限制。</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><strong>请求资源</strong>
-<ul>
-<li><strong>URL：</strong> 统一资源定位符。只能定位互联网资源。是URI的子集。</li>
-<li><strong>URI：</strong> 统一资源标记符。用于标记任何资源。可以是本地文件系统，局域网的资源，也可以是互联网。</li>
-</ul>
-</li>
-<li><strong>HTTP版本</strong>：目前主要分1.0和1.1
-<ul>
-<li>HTTP/1.0：非持久连接，建立连接后只能发送一次请求，一次请求之后连接关闭。<br>
-<strong>请求头中的Connection：close</strong></li>
-<li>HTTP/1.1：默认使用持久连接，建立连接后可以在一次连接中发送多次请求。（基本都使用1.1）。<br>
-<strong>请求头中的Connection：keep-alive</strong></li>
-</ul>
-</li>
-</ul>
-<h5 id="请求头：-多个key-value对象"><a class="header-anchor" href="#请求头：-多个key-value对象"> </a><strong>请求头：</strong> 多个key-value对象</h5>
-<blockquote>
-<p>Accept: text/html,image/*     <em>– 浏览器接受的数据类型</em><br>
-Accept-Charset: ISO-8859-1     <em>– 浏览器接受的编码格式</em><br>
-Accept-Encoding: gzip,compress  <em>–浏览器接受的数据压缩格式</em><br>
-Accept-Language: en-us,zh-       <em>–浏览器接受的语言</em><br>
-Host: www.it315.org:80          <em>–（必须的）当前请求访问的目标地址（主机:端口）</em><br>
-If-Modified-Since: Tue, 11 Jul 2000 18:23:51 GMT  <em>–浏览器最后的缓存时间</em><br>
-Referer: http://www.it315.org/index.jsp      <em>– 当前请求来自于哪里</em><br>
-User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)  <em>–浏览器类型</em><br>
-Cookie:name=eric                     <em>– 浏览器保存的cookie信息</em><br>
-Connection: close/Keep-Alive            <em>– 浏览器跟服务器连接状态。close: 连接关闭  keep-alive：保存连接。</em><br>
-Date: Tue, 11 Jul 2000 18:23:51 GMT      <em>– 请求发出的时间</em></p>
-</blockquote>
-<h5 id="空行：-通知服务器以下不再有请求头"><a class="header-anchor" href="#空行：-通知服务器以下不再有请求头"> </a><strong>空行：</strong> 通知服务器以下不再有请求头</h5>
-<h5 id="实体内容"><a class="header-anchor" href="#实体内容"> </a><strong>实体内容</strong></h5>
-<ul>
-<li>只有POST提交的参数会放到实体内容中</li>
-</ul>
-<h3 id="http响应"><a class="header-anchor" href="#http响应"> </a>http响应</h3>
-<h4 id="http响应的格式"><a class="header-anchor" href="#http响应的格式"> </a><strong>http响应的格式</strong></h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;status-line&gt;					--状态行</div><div class="line">&lt;response-headers&gt;				--响应头</div><div class="line">&lt;empty-line&gt;					--空行</div><div class="line">[&lt;message-body&gt;]				--实体内容</div></pre></td></tr></table></figure>
-<h4 id="http响应示例"><a class="header-anchor" href="#http响应示例"> </a><strong>http响应示例</strong></h4>
-<blockquote>
-<p>HTTP/1.1 200 OK<br>
-Date: Sat, 31 Dec 2005 23:59:59 GMT<br>
-Content-Type: text/html;charset=ISO-8859-1<br>
-Content-Length: 122<br>
-–空行<br>
-＜html＞<br>
-…<br>
-＜/html＞</p>
-</blockquote>
-<h4 id="http响应详解"><a class="header-anchor" href="#http响应详解"> </a><strong>http响应详解</strong></h4>
-<h5 id="状态行"><a class="header-anchor" href="#状态行"> </a><strong>状态行</strong></h5>
+<h3 id="cookie核心api"><a class="header-anchor" href="#cookie核心api"> </a>Cookie核心API</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">1）构造Cookie对象</div><div class="line">	Cookie(java.lang.String name, java.lang.String value)</div><div class="line">2）设置cookie</div><div class="line">	//设置cookie的有效访问路径</div><div class="line">	void setPath(java.lang.String uri)</div><div class="line">	//设置cookie的有效时间</div><div class="line">	void setMaxAge(int expiry) </div><div class="line">	//设置cookie的值</div><div class="line">	void setValue(java.lang.String newValue)</div><div class="line">	//设置cookie的有效域</div><div class="line">	void setDomain(String pattern)</div><div class="line">3）发送cookie到浏览器端保存</div><div class="line">	//发送cookie</div><div class="line">	void response.addCookie(Cookie cookie)</div><div class="line">4）服务器接收cookie</div><div class="line">	//接收cookie</div><div class="line">	Cookie[] request.getCookies()</div></pre></td></tr></table></figure>
+<h3 id="cookie细节"><a class="header-anchor" href="#cookie细节"> </a>Cookie细节</h3>
 <ul>
 <li>
-<p><strong>协议版本：</strong> 可参上请求行/HTTP版本</p>
+<p>一个Cookie只能标识一种信息，它至少含有一个标识该信息的名称（NAME）和设置值（VALUE）。</p>
 </li>
 <li>
-<p><strong>状态码：</strong></p>
-<ul>
-<li><strong>介绍：</strong> 状态代码为3位数字，200-299的状态码表示成功，300-399的状态码指资源重定向，400-499的状态码指客户端请求出错，500-599的状态码指服务端出错（HTTP/1.1向协议中引入了信息性状态码，范围为100-199）</li>
-<li><strong>常见例子：</strong></li>
+<p>void setPath(java.lang.String uri)   ：设置cookie的有效访问路径。有效路径指的是cookie的有效路径保存在哪里，那么浏览器在有效路径下访问服务器时就会带着cookie信息，否则不带cookie信息。</p>
+</li>
+<li>
+<p>void setMaxAge(int expiry) ： 设置cookie的有效时间。<br>
+<strong>正整数：表示cookie数据保存浏览器的缓存目录（硬盘中），数值表示保存的时间。</strong><br>
+<strong>负整数：表示cookie数据保存浏览器的内存中。浏览器关闭cookie就丢失了！！</strong><br>
+<strong>零：表示删除同名的cookie数据</strong><br>
+<strong>注意，删除cookie时，path必须一致，否则不会删除</strong></p>
+</li>
+<li>
+<p>一个WEB站点可以给一个WEB浏览器发送多个Cookie，一个WEB浏览器也可以存储多个WEB站点提供的Cookie，但是浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。</p>
+</li>
+<li>
+<p>Cookie中存储中文</p>
+</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//必须使用URLEncoder类里面的encode(String s, String enc)方法进行中文转码</span></div><div class="line">Cookie cookie = <span class="keyword">new</span> Cookie(<span class="string">"userName"</span>, URLEncoder.encode(<span class="string">"用户名"</span>, <span class="string">"UTF-8"</span>));</div><div class="line">response.addCookie(cookie);</div><div class="line"><span class="comment">//获取cookie中的中文数据，使用URLDecoder类里面的decode(String s, String enc)进行解码</span></div><div class="line">URLDecoder.decode(cookies[i].getValue(), <span class="string">"UTF-8"</span>);</div></pre></td></tr></table></figure>
+<h2 id="session"><a class="header-anchor" href="#session"> </a>Session</h2>
+<h3 id="session机制的引入"><a class="header-anchor" href="#session机制的引入"> </a>Session机制的引入</h3>
+<ul>
+<li>Cookie的局限：</li>
+</ul>
+<ol>
+<li>Cookie只能存字符串类型。不能保存对象</li>
+<li>不能直接存储中文字符。</li>
+<li>1个Cookie的容量不超过4KB。</li>
+</ol>
+<p>因为Cookie的种种局限所以引入Session机制，可以很好的解决以上的问题</p>
+<h3 id="session原理"><a class="header-anchor" href="#session原理"> </a>Session原理</h3>
+<p>Session是服务器技术，服务器可以为每个用户浏览器创建一个会话对象（session对象），注意：一个浏览器独占一个session对象(默认情况下)。因此，在需要保存用户数据时，服务器程序可以把用户数据写到用户浏览器独占的session中，当用户使用浏览器访问其它程序时，其它程序可以从用户的session中取出该用户的数据，为用户服务。</p>
+<h3 id="session机制的流程："><a class="header-anchor" href="#session机制的流程："> </a>Session机制的流程：</h3>
+<p>以下是服务器内部的行为</p>
+<ol>
+<li>第一次访问创建session对象，给session对象分配一个唯一的ID，叫JSESSIONID<br>
+	new HttpSession();</li>
+<li>把JSESSIONID作为Cookie的值发送给浏览器保存<br>
+	Cookie cookie = new Cookie(“JSESSIONID”, sessionID);<br>
+	response.addCookie(cookie);</li>
+<li>第二次访问的时候，浏览器带着JSESSIONID的cookie访问服务器</li>
+<li>服务器得到JSESSIONID，在服务器的内存中搜索是否存放对应编号的session对象。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">服务器搜索session对象的伪代码</div><div class="line">if(找到)&#123;</div><div class="line">	return map.get(sessionID);</div><div class="line">&#125;</div><div class="line">存储session对象的Map结构</div><div class="line">Map&lt;String,HttpSession&gt;</div><div class="line">&lt;&quot;001&quot;, s1&gt;</div><div class="line">&lt;&quot;001&quot;, s2&gt;</div></pre></td></tr></table></figure>
+<ol start="5">
+<li>如果找到对应编号的session对象，直接返回该对象</li>
+<li>如果找不到对应编号的session对象，创建新的session对象，继续走1的流程</li>
+</ol>
+<h3 id="session核心api"><a class="header-anchor" href="#session核心api"> </a>Session核心API</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">状态码</th>
-<th style="text-align:left">说明</th>
+<th style="text-align:center">方法</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">200</td>
-<td style="text-align:left">响应成功</td>
+<td style="text-align:center">void setAttribute(String attribute, Object value)</td>
+<td style="text-align:left">设置Session属性。value参数可以为任何Java Object。通常为Java Bean。value信息不宜过大</td>
 </tr>
 <tr>
-<td style="text-align:left">302</td>
-<td style="text-align:left">跳转，跳转地址通过响应头中的Location属性指定</td>
+<td style="text-align:center">String getAttribute(String attribute)</td>
+<td style="text-align:left">返回Session属性</td>
 </tr>
 <tr>
-<td style="text-align:left">400</td>
-<td style="text-align:left">客户端请求有语法错误，不能被服务器识别</td>
+<td style="text-align:center">Enumeration getAttributeNames()</td>
+<td style="text-align:left">返回Session中存在的属性名</td>
 </tr>
 <tr>
-<td style="text-align:left">403</td>
-<td style="text-align:left">服务器接收到请求，但是拒绝提供服务（认证失败）</td>
+<td style="text-align:center">void removeAttribute(String attribute)</td>
+<td style="text-align:left">移除Session属性</td>
 </tr>
 <tr>
-<td style="text-align:left">404</td>
-<td style="text-align:left">请求资源不存在</td>
+<td style="text-align:center">String getId()</td>
+<td style="text-align:left">返回Session的ID。该ID由服务器自动创建，不会重复</td>
 </tr>
 <tr>
-<td style="text-align:left">500</td>
-<td style="text-align:left">服务器内部错误</td>
+<td style="text-align:center">long getCreationTime()</td>
+<td style="text-align:left">返回Session的创建日期。返回类型为long，常被转化为Date类型，例如：Date createTime = new Date(session.getCreationTime())</td>
+</tr>
+<tr>
+<td style="text-align:center">long getLastAccessedTime()</td>
+<td style="text-align:left">返回Session的最后活跃时间。返回类型为long</td>
+</tr>
+<tr>
+<td style="text-align:center">int getMaxInactiveInterval()</td>
+<td style="text-align:left">返回Session的超时时间。单位为秒。超过该时间没有访问，服务器认为该Session失效</td>
+</tr>
+<tr>
+<td style="text-align:center">void setMaxInactiveInterval(int second)</td>
+<td style="text-align:left">设置Session的超时时间。单位为秒</td>
+</tr>
+<tr>
+<td style="text-align:center">boolean isNew()</td>
+<td style="text-align:left">返回该Session是否是新创建的</td>
+</tr>
+<tr>
+<td style="text-align:center">void invalidate()</td>
+<td style="text-align:left">使该Session失效</td>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p><strong>状态码描述</strong></p>
+<h3 id="session细节"><a class="header-anchor" href="#session细节"> </a>Session细节</h3>
+<ul>
+<li>两个getSession方法：</li>
+</ul>
+<ol>
+<li><strong>getSession(true) / getSession()</strong> : 创建或得到session对象。没有匹配的session编号，自动创建新的session对象。</li>
+<li><strong>getSession(false)</strong> : 得到session对象。没有匹配的session编号，返回null</li>
+</ol>
+<ul>
+<li>Session对象销毁时间：</li>
+</ul>
+<ol>
+<li>手动销毁Session对象invalidate()</li>
+<li>默认情况30分钟不访问服务器自动回收</li>
+<li>手动修改Session回事时间setMaxInactiveInterval()</li>
+<li>全局修改Session有效时间（修改web.xml）</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 修改session全局有效时间:分钟 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>1<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><strong>浏览器禁用Cookie后的Session处理</strong><br>
+解决方案：URL重写，使用一下方法可将SessionId信息写入URL，不必依赖于Cookie
+<ul>
+<li>response. encodeRedirectURL(java.lang.String url)<br>
+用于对sendRedirect方法后的url地址进行重写。</li>
+<li>response. encodeURL(java.lang.String url)<br>
+用于对表单action和超链接的url地址进行重写</li>
+</ul>
 </li>
 </ul>
-<h5 id="响应头"><a class="header-anchor" href="#响应头"> </a><strong>响应头</strong></h5>
-<blockquote>
-<p>Location: http://www.it315.org/index.jsp   --表示重定向的地址，该头和302的状态码一起使用。<br>
-Server:apache tomcat                 --表示服务器的类型<br>
-Content-Encoding: gzip                 – 表示服务器发送给浏览器的数据压缩类型<br>
-Content-Length: 80                    --表示服务器发送给浏览器的数据长度<br>
-Content-Language: zh-cn               --表示服务器支持的语言<br>
-Content-Type: text/html; charset=GB2312   --表示服务器发送给浏览器的数据类型及内容编码<br>
-Last-Modified: Tue, 11 Jul 2000 18:23:51 GMT  --表示服务器资源的最后修改时间<br>
-Refresh: 1;url=http://www.it315.org     --表示定时刷新<br>
-Content-Disposition: attachment; filename=aaa.zip --表示告诉浏览器以下载方式打开资源（下载文件时用到）<br>
-Transfer-Encoding: chunked<br>
-Set-Cookie:SS=Q0=5Lb_nQ; path=/search   --表示服务器发送给浏览器的cookie信息（会话管理用到）<br>
-Expires: -1                           --表示通知浏览器不进行缓存<br>
-Cache-Control: no-cache<br>
-Pragma: no-cache<br>
-Connection: close/Keep-Alive           --表示服务器和浏览器的连接状态。close：关闭连接 keep-alive:保存连接</p>
-</blockquote>
-<h5 id="空行：-通知服务器以下不再有响应头"><a class="header-anchor" href="#空行：-通知服务器以下不再有响应头"> </a><strong>空行：</strong> 通知服务器以下不再有响应头</h5>
-<h5 id="实体内容：-即服务器返回的内容"><a class="header-anchor" href="#实体内容：-即服务器返回的内容"> </a><strong>实体内容：</strong> 即服务器返回的内容</h5>
 
       
     </div>
@@ -626,7 +629,7 @@ Connection: close/Keep-Alive           --表示服务器和浏览器的连接状
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
           
         </div>
       
@@ -639,15 +642,15 @@ Connection: close/Keep-Alive           --表示服务器和浏览器的连接状
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/09/转发&重定向/" rel="next" title="关于转发和重定向">
+                <i class="fa fa-chevron-left"></i> 关于转发和重定向
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/09/转发&重定向/" rel="prev" title="关于转发和重定向">
-                关于转发和重定向 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -807,7 +810,7 @@ Connection: close/Keep-Alive           --表示服务器和浏览器的连接状
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#http是什么"><span class="nav-text"> http是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是http-http的内容"><span class="nav-text"> 什么是http（http的内容）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http请求"><span class="nav-text"> http请求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http请求的格式"><span class="nav-text"> http请求的格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http请求示例"><span class="nav-text"> http请求示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http请求详解"><span class="nav-text"> http请求详解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#请求行"><span class="nav-text"> 请求行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求头：-多个key-value对象"><span class="nav-text"> 请求头： 多个key-value对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#空行：-通知服务器以下不再有请求头"><span class="nav-text"> 空行： 通知服务器以下不再有请求头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实体内容"><span class="nav-text"> 实体内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http响应"><span class="nav-text"> http响应</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http响应的格式"><span class="nav-text"> http响应的格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http响应示例"><span class="nav-text"> http响应示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http响应详解"><span class="nav-text"> http响应详解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#状态行"><span class="nav-text"> 状态行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#响应头"><span class="nav-text"> 响应头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#空行：-通知服务器以下不再有响应头"><span class="nav-text"> 空行： 通知服务器以下不再有响应头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实体内容：-即服务器返回的内容"><span class="nav-text"> 实体内容： 即服务器返回的内容</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#会话管理"><span class="nav-text"> 会话管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie"><span class="nav-text"> Cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie机制的引入"><span class="nav-text"> Cookie机制的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie原理"><span class="nav-text"> Cookie原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie机制的流程"><span class="nav-text"> Cookie机制的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie核心api"><span class="nav-text"> Cookie核心API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie细节"><span class="nav-text"> Cookie细节</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#session"><span class="nav-text"> Session</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#session机制的引入"><span class="nav-text"> Session机制的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session原理"><span class="nav-text"> Session原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session机制的流程："><span class="nav-text"> Session机制的流程：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session核心api"><span class="nav-text"> Session核心API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session细节"><span class="nav-text"> Session细节</span></a></li></ol></li></ol></div>
             
 
           </div>
