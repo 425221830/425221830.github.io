@@ -101,7 +101,7 @@ Session通过在服务器端记录信息确定用户身份。">
 
 Cookie通过在客户端记录信息确定用户身份
 Session通过在服务器端记录信息确定用户身份。">
-<meta property="og:updated_time" content="2017-04-15T15:32:44.000Z">
+<meta property="og:updated_time" content="2017-04-15T15:41:25.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cookie和Session">
 <meta name="twitter:description" content="本篇文章简单记录了关于Web会话管理技术的学习笔记。
@@ -490,13 +490,14 @@ request.getCookies();</li>
 <h2 id="session"><a class="header-anchor" href="#session"> </a>Session</h2>
 <h3 id="session机制的引入"><a class="header-anchor" href="#session机制的引入"> </a>Session机制的引入</h3>
 <ul>
-<li>Cookie的局限：</li>
-</ul>
+<li>Cookie的局限：
 <ol>
 <li>Cookie只能存字符串类型。不能保存对象</li>
 <li>不能直接存储中文字符。</li>
 <li>1个Cookie的容量不超过4KB。</li>
 </ol>
+</li>
+</ul>
 <p>因为Cookie的种种局限所以引入Session机制，可以很好的解决以上的问题</p>
 <h3 id="session原理"><a class="header-anchor" href="#session原理"> </a>Session原理</h3>
 <p>Session是服务器技术，服务器可以为每个用户浏览器创建一个会话对象（session对象），注意：一个浏览器独占一个session对象(默认情况下)。因此，在需要保存用户数据时，服务器程序可以把用户数据写到用户浏览器独占的session中，当用户使用浏览器访问其它程序时，其它程序可以从用户的session中取出该用户的数据，为用户服务。</p>
@@ -573,15 +574,15 @@ request.getCookies();</li>
 </table>
 <h3 id="session细节"><a class="header-anchor" href="#session细节"> </a>Session细节</h3>
 <ul>
-<li>两个getSession方法：</li>
-</ul>
+<li>
+<p>两个getSession方法：</p>
 <ol>
 <li><strong>getSession(true) / getSession()</strong> : 创建或得到session对象。没有匹配的session编号，自动创建新的session对象。</li>
 <li><strong>getSession(false)</strong> : 得到session对象。没有匹配的session编号，返回null</li>
 </ol>
-<ul>
-<li>Session对象销毁时间：</li>
-</ul>
+</li>
+<li>
+<p>Session对象销毁时间：</p>
 <ol>
 <li>手动销毁Session对象invalidate()</li>
 <li>默认情况30分钟不访问服务器自动回收</li>
@@ -589,9 +590,10 @@ request.getCookies();</li>
 <li>全局修改Session有效时间（修改web.xml）</li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 修改session全局有效时间:分钟 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>1<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li><strong>浏览器禁用Cookie后的Session处理</strong><br>
-解决方案：URL重写，使用一下方法可将SessionId信息写入URL，不必依赖于Cookie
+</li>
+<li>
+<p><strong>浏览器禁用Cookie后的Session处理</strong><br>
+解决方案：URL重写，使用一下方法可将SessionId信息写入URL，不必依赖于Cookie</p>
 <ul>
 <li>response. encodeRedirectURL(java.lang.String url)<br>
 用于对sendRedirect方法后的url地址进行重写。</li>
@@ -651,6 +653,10 @@ request.getCookies();</li>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/18/LayoutInflater/" rel="prev" title="LayoutInflater简析">
+                LayoutInflater简析 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -724,7 +730,7 @@ request.getCookies();</li>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -735,7 +741,7 @@ request.getCookies();</li>
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -746,7 +752,7 @@ request.getCookies();</li>
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
